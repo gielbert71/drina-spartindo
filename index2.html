@@ -72,6 +72,45 @@
         .ftext{
             margin-left: 240px;
         }
+        .undercarriage {
+            background-image: url('images/products/undercarriage/text.png');
+            
+            background-repeat: no-repeat;
+            background-position:center;
+            background-origin: content-box;
+        }
+
+        .bucket {
+            background-image: url('images/products/bucket/text.png');
+            
+            background-repeat: no-repeat;
+            background-position: center;
+            background-origin: content-box;
+        }
+
+        .bucketparts {
+            background-image: url('images/products/bucket_parts/bucket.png');
+            
+            background-repeat: no-repeat;
+            background-position: center;
+            background-origin: content-box;
+        }
+
+        .cylinder {
+            background-image: url('images/products/cylinder/text.png');
+            
+            background-repeat: no-repeat;
+            background-position: center;
+            background-origin: content-box;
+        }
+
+        .otherp {
+            background-image: url('images/products/others/text.png');
+            
+            background-repeat: no-repeat;
+            background-position: center;
+            background-origin: content-box;
+        }
 
         @media only screen and (min-width:1000px) {
             
@@ -110,14 +149,15 @@
                 height: 150px;
             }
             .prods{
-                max-width: 85%;
+                max-width: 80%;
             }
             .prodf, .prodf2, .prodf4{
-                max-width: 80%;
+                max-width: 70%;
                 
             }
             .prodbg{
-                background-size: contain;
+                background-size: 80%;
+                background-position: top;
             }
             .ftext{
                 margin: 4%;
@@ -168,45 +208,7 @@
             justify-content: center;
         }
 
-        .undercarriage {
-            background-image: url('images/products/undercarriage/text.png');
-            
-            background-repeat: no-repeat;
-            background-position: center;
-            background-origin: content-box;
-        }
-
-        .bucket {
-            background-image: url('images/products/bucket/text.png');
-            
-            background-repeat: no-repeat;
-            background-position: center;
-            background-origin: content-box;
-        }
-
-        .bucketparts {
-            background-image: url('images/products/bucket_parts/bucket.png');
-            
-            background-repeat: no-repeat;
-            background-position: center;
-            background-origin: content-box;
-        }
-
-        .cylinder {
-            background-image: url('images/products/cylinder/text.png');
-            
-            background-repeat: no-repeat;
-            background-position: center;
-            background-origin: content-box;
-        }
-
-        .otherp {
-            background-image: url('images/products/others/text.png');
-            
-            background-repeat: no-repeat;
-            background-position: center;
-            background-origin: content-box;
-        }
+        
         
     </style>
 
@@ -446,11 +448,11 @@
                 style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px">
                 <div style="background-color: #e7e7e7; width:100%; height:100%px; border-radius: 20px; display:none;"
                     class="flex xl:grid-cols-2 py-10 produk-1" id="produk-1">
-                    <div class="flex justify-center items-center pt-6 pb-6 undercarriage prodbg">
+                    <div class="flex justify-center items-center pb-6 undercarriage prodbg">
                         <div class="relative justify-center items-center">
                             <!-- <img src="images/products/undercarriage/text.png" alt="" class="text-png"> -->
                             <img src="images/products/undercarriage/Undercarriage.png" alt="" class="prodf m-auto"
-                                style="margin-top: 25%;" id="prodf1">
+                                 id="prodf1">
                         </div>
                     </div>
                     <!-- konten kanan -->
@@ -910,7 +912,7 @@
         <script>
             $('.owl-carousel').owlCarousel({
                 loop: true,
-                margin: 170,
+                margin: 260,
                 autoplay: true,
                 center: true,
                 responsive: {
@@ -1040,6 +1042,7 @@
                     display = 0;
                     rotation1.style.transform = 'rotate(0deg)';
                     prodt1.style.opacity = '1';
+                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
                 } else {
                     divsatu.style.display = 'grid';
                     rotation1.style.transform = 'rotate(180deg)';
@@ -1055,6 +1058,7 @@
                     display2 = 0;
                     rotation2.style.transform = 'rotate(0deg)';
                 }else{
+                    prodf2.src="images/products/bucket/BUCKET RIPPER.png";
                     produkdua.style.display = 'grid';
                     rotation2.style.transform = 'rotate(180deg)';
                     prodt2.style.opacity = '0';
@@ -1068,6 +1072,7 @@
                     display3 = 0;
                     rotation3.style.transform = 'rotate(0deg)';
                     prodt3.style.opacity = '1';
+                    prodf3.src="images/products/bucket_parts/Adapter Tooth bucket.png";
                 } else {
                     produk3.style.display = 'grid';
                     rotation3.style.transform = 'rotate(180deg)';
@@ -1098,6 +1103,7 @@
                     prodt5.style.opacity = '1';
                     display5 = 0;
                     rotation5.style.transform = 'rotate(0deg)';
+                    prodf5.src="images/products/others/nozzle injector.png";
                 } else {
                     produk5.style.display = 'grid';
                     prodt5.style.opacity = '0';
