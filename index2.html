@@ -35,6 +35,19 @@
         .abtext{
             max-width: 800px;
         }
+        .opac{   
+            opacity: 1;
+            animation: opac ease 1.5s;
+            transition: all ease 1s;
+        }
+        @keyframes opac{
+            0%,50%{
+                opacity: 0;
+            }100%{
+                opacity: 1;
+            }
+        }
+
         .prods{
             max-width: 1445px;
         }
@@ -188,10 +201,25 @@
 
         .aboutus {
             position: relative;
-            background: linear-gradient(180deg, rgba(25, 45, 53, 0.89) 22.64%, rgba(12, 33, 42, 0.87) 84.56%),
-                url('vid.mp4') center/cover;
+            background: linear-gradient(180deg, rgba(25, 45, 53, 0.89) 22.64%, rgba(12, 33, 42, 0.911) 84.56%, rgb(12, 33, 42) 99%),
+            url('vid.mp4') center/cover;
+            background-size: 100% 100%;
             color: white;
             /* Set the text color to contrast with the background */
+            animation: bgabt ease 1s;
+        }
+        
+        @keyframes bgabt{
+            0%,50%{
+                background-position: 0% 100%;
+                background-size: 800% 11800%;
+
+
+            } 100%{
+                background-position: 100% 100%;
+                background-size: 100% 100%;
+            }
+
         }
 
         .aboutus::before {
@@ -209,19 +237,52 @@
 
         .transisi {
             opacity: 0.99;
-            background: linear-gradient(180deg, #0C212A 10.93%, #FFF 76.65%);
+            background: linear-gradient(180deg, #0C212A 3.93%, #0c212a 4.93%, #FFF 50.65%);
         }
 
         .transisi a {
             color: #FFF;
-            width: 180px;
-            height: 50px;
+            max-width: 180px;
+            max-height: 50px;
+            width: 100%;
+            height: 100%;
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all ease 0.2s;
+        }
+        a {
+            transition: all ease 0.2s;
         }
 
+        .prodbox{
+            background-color: #FFF;
+            width:fit-content;
+            height:fit-content;
+            border-radius:5%;
+            transition: box-shadow 0.5s ease;
+        }
+
+        .prodbox:hover, .prodbox:active{
+            background: linear-gradient(90deg, #FFF, #FFF, #FAFCB4, #FFEA54, #FFE76A, #FFEA54, #FAFCB4, #FFF, #FFF);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-size: 800% 800%;
+            animation: producthover 2s ease;
+        }
+
+        @keyframes producthover{
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: 100% 100%;
+            }
+        }
+
+        img{
+            transition: all 0.2s ease;
+        }
         
         
     </style>
@@ -310,25 +371,25 @@
         </nav>
         <div class="h-full">
 
-            <video playsinline autoplay muted loop src="vid.mp4"
+            <video playsinline autoplay muted loop src="Street.mp4"
             style="position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; object-fit: cover; overflow: hidden;"
             type="video/webm"></video>
             <!-- ABOUT US -->
-            <div style="height: 880px;" id="aboutus" class="aboutus text-white">
+            <div style="height: 800px;" id="aboutus" class="aboutus text-white">
                 
                 <!-- <h1 class="text-3xl font-bold" style="text-align: center;">Drina Spartindo Global</h1> -->
             <!-- Logo -->
             <div class="flex w-full mr-auto ml-auto justify-center items-center">
                 <div class="flex justify-center items-center mt-64">
                     <img src="images/Drina-Putih-02 1.png" alt="Drina Spartindo Global"
-                        class="center place-items-center">
+                        class="center place-items-center opac">
                 </div>
             </div>
 
             <!-- ABOUT US TEXT -->
             <div class="flex justify-center items-center">
                 
-                <p class="text-center abtext" style="margin-top:5%; padding-bottom: 200px;">
+                <p class="text-center abtext opac" style="margin-top:5%; padding-bottom: 200px;">
                     Known as DSG, was established in 2020 with the goal
                     of becoming a leader in the Heavy Equipment Spare
                     parts industry in Indonesia. By staying true to our core
@@ -339,11 +400,12 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="transisi w-full flex justify-center" style="height: 200px;">
+</div>
+
+<div class="transisi w-full flex justify-center" style="height: 280px;">
 
 
-        <div class="flex 2xl:justify-between justify-evenly mt-7" style="width: 720px;">
+        <div class="flex 2xl:justify-between justify-evenly mt-16" style="width: 660px;">
             <!-- Credential -->
             <!-- <div class="flex items-center justify-center mt-6"> -->
             <a href="DSG Company Profile.pdf" class="md:hover:text-blue-700"
@@ -359,7 +421,7 @@
     </div>
 
     <div class="text-bold text-center">
-        <h1 class="text-3xl mt-24 font-bold" style="margin-top: 10%;">VISION</h1>
+        <h1 class="text-3xl font-bold">VISION</h1>
         <br><br>
         <div class="flex items-center justify-center">
             <p style="max-width: 90%;">Become the ultimate customer value provider for heavy equipment
@@ -374,7 +436,7 @@
                 relationships with customers and suppliers through innovative solutions and committed employees</p>
         </div>
     </div>
-    <br id="inquiry"><br>
+    <br><br>
 
     <div class="py-16 text-center mt-9 inquiry" style="background-color: #ffcd11;">
         <h1 class="text-3xl font-bold">OUR CORE VALUES</h1>
@@ -446,19 +508,18 @@
         <h1 class="text-center text-3xl font-bold mb-10">OUR PRODUCTS</h1>
         <!-- UNDERCARRIAGE -->
         <div class="flex justify-center items-center">
-
-            <div class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="hideShowSatu()">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
-                        <button onclick="hideShowSatu()"
+                        <button
                         class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
                         id="produk-1-text">UNDERCARRIAGE</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700" onclick="hideShowSatu()"><img
+                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
                             src="button.png" style="max-height: 10px;" alt="" id="rotation1"></button>
                         </div>
-                    </div>
+                    </a>
                 </div>
         <div class="w-full z-20 top-0 start-0">
             <div class="flex flex-wrap items-center justify-between mx-auto py-2 prods"
@@ -477,71 +538,71 @@
                         <div class="flex md:flex-row flex-col justify-center items-center">
                             <div class="row flex justify-center items-center m-3" onclick="tracklink()">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center justify-center items-center">
+                                <a href="#."
+                                    class=" p-4 text-center justify-center items-center prodbox">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/TRACKLINK UNDERCARRIAGE.png" alt="">
                                     </div>
                                     <p class=" mt-2">Tracklink</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center" onclick="sidecutter()">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="sidecutter()">
+                                <a href="#." 
+                                    class=" p-4 text-center m-3 prodbox">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Side Cutter.png" alt="">
                                     </div>
                                     <p class=" mt-2">Side Cutter</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="boltsandnuts()">
+                                <a href="#."
+                                    class=" p-4 text-center m-3 prodbox" onclick="boltsandnuts()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Bolts and Nuts.png" alt="">
                                     </div>
                                     <p class=" mt-2">Bolts and Nuts</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="flex md:flex-row flex-col justify-center items-center">
-                            <div class="row">
+                            <div class="row flex justify-center items-center">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="sprocket()">
+                                <a href="#."
+                                    class=" p-4 text-center m-3 prodbox" onclick="sprocket()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Sprocket.png" alt="">
                                     </div>
                                     <p class=" mt-2">Sprocket</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="trackroller()">
+                                <a href="#." 
+                                    class=" p-4 text-center m-3 prodbox" onclick="trackroller()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Track Roller Undercarriage.png" alt="">
                                     </div>
                                     <p class=" mt-2">Trackroller</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="toproller()">
+                                <a href="#."
+                                    class=" p-4 text-center m-3 prodbox" onclick="toproller()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Top Roller Undercarriage.png" alt="">
                                     </div>
                                     <p class=" mt-2">Top Roller</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -552,18 +613,18 @@
         <!-- BUCKET -->
         <div class="flex justify-center items-center">
 
-            <div class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="hideShowDua()">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
-                        <button onclick="hideShowDua()"
+                        <button
                         class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
                         id="produk-2-text">BUCKET</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700" onclick="hideShowDua()"><img
+                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
                             src="button.png" style="max-height: 10px;" alt="" id="rotation2"></button>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
         <div class="w-full z-20 top-0 start-0">
@@ -583,49 +644,49 @@
                         <div class="flex md:flex-row flex-col justify-center items-center">
                             <div class="row flex justify-center items-center m-3" onclick="stdbucket()">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center justify-center items-center">
+                                <a href="#."
+                                    class=" p-4 text-center justify-center items-center prodbox">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/BUCKET STANDARD.png" alt="">
                                     </div>
                                     <p class=" mt-2">Standard Bucket</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="ripbucket()">
+                                <a href="#>"
+                                    class=" p-4 text-center m-3 prodbox" onclick="ripbucket()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/BUCKET RIPPER.png" alt="">
                                     </div>
                                     <p class=" mt-2">Ripper Bucket</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="skebucket()">
+                                <a href="#."
+                                    class=" p-4 text-center m-3 prodbox" onclick="skebucket()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/Jaring Bucket.png" alt="">
                                     </div>
                                     <p class=" mt-2">Skeleton Bucket</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="flex md:flex-row flex-col justify-center items-center">
-                            <div class="row">
+                            <div class="row flex justify-center items-center">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="chibucket()">
+                                <a href="#."
+                                    class=" p-4 text-center m-3 prodbox" onclick="chibucket()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/Chipping Bucket.png" alt="">
                                     </div>
                                     <p class=" mt-2">Chipping Bucket</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -636,18 +697,18 @@
         <!-- BUCKET PARTS -->
         <div class="flex justify-center items-center">
 
-            <div class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkTiga()">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
-                        <button onclick="produkTiga()"
+                        <button
                         class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
                         id="produk-3-text">BUCKET PARTS</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700" onclick="produkTiga()"><img
+                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
                             src="button.png" style="max-height: 10px;" alt="" id="rotation3"></button>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
         <div class="w-full z-20 top-0 start-0">
@@ -707,18 +768,18 @@
         <!-- CYLINDER HYDRAULIC -->
         <div class="flex justify-center items-center">
 
-            <div class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkEmpat()">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
-                        <button onclick="produkEmpat()"
+                        <button
                         class="text-center font-bold text-xl md:hover:text-blue-700 cyltext"
                         id="produk-4-text">CYLINDER HYDRAULIC</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700" onclick="produkEmpat()"><img
+                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
                             src="button.png" style="max-height: 10px;" alt="" id="rotation4"></button>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
         <div class="w-full z-20 top-0 start-0">
@@ -756,18 +817,18 @@
 <!-- OTHERS -->
 <div class="flex justify-center items-center">
 
-    <div class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;">
+    <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkLima()">
         <div class="flex justify-between w-full items-center mt-4">
             <!-- <div class="relative"> -->
                 
-                <button onclick="produkLima()"
+                <button
                 class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
                 id="produk-5-text">OTHERS</button>
                 <!-- </div> -->
-                <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700" onclick="produkLima()"><img
+                <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
                     src="button.png" style="max-height: 10px;" alt="" id="rotation5"></button>
                 </div>
-            </div>
+            </a>
         </div>
 <div class="w-full z-20 top-0 start-0">
     <div class="flex flex-wrap items-center justify-between mx-auto py-2 prods"
@@ -927,9 +988,12 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="owl.carousel.min.js"></script>
         <script>
+
+            // OWL CAROUSEL 
+
             $('.owl-carousel').owlCarousel({
                 loop: true,
-                margin: 260,
+                margin: 290,
                 autoplay: true,
                 center: true,
                 responsive: {
@@ -940,7 +1004,10 @@
                         items: 3
                     }
                 }
-            })
+            });
+
+            // VARIABLES
+
             var prodf1 = document.getElementById('prodf1');
             var prodf2 = document.getElementById('prodf2');
             var prodf3 = document.getElementById('prodf3');
@@ -967,33 +1034,74 @@
             var display3 = 0;
             var display4 = 0;
             var display5 = 0;
+            var fotoproduk = 1;
+
+            // UNDERCARRIAGE PRODUCTS
 
             function tracklink() {
-                prodf1.src = "images/products/undercarriage/TRACKLINK UNDERCARRIAGE.png"
+                if (fotoproduk == 1) {
+                    prodf1.src = "images/products/undercarriage/TRACKLINK UNDERCARRIAGE.png";
+                    fotoproduk = 0;
+                } else {
+                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
+                    fotoproduk = 1;
+                }
             }
             
             function sidecutter(){
-                prodf1.src = "images/products/undercarriage/Side Cutter.png"
+                if (fotoproduk == 1){
+                    prodf1.src = "images/products/undercarriage/Side Cutter.png";
+                    fotoproduk = 0;
+                } else {
+                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
+                    fotoproduk = 1;
+                }
             }
             
             function boltsandnuts(){
-                prodf1.src = "images/products/undercarriage/Bolts and Nuts.png"
+                if (fotoproduk == 1){
+                    prodf1.src = "images/products/undercarriage/Bolts and Nuts.png";
+                    fotoproduk = 0;
+                } else {
+                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
+                    fotoproduk = 1;
+                }
             }
             
             function sprocket(){
-                prodf1.src = "images/products/undercarriage/Sprocket.png"
+                if (fotoproduk == 1){
+                    prodf1.src = "images/products/undercarriage/Sprocket.png";
+                    fotoproduk = 0;
+                } else {
+                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
+                    fotoproduk = 1;
+                }
             }
             
             function toproller(){
-                prodf1.src = "images/products/undercarriage/Top Roller Undercarriage.png"
+                if (fotoproduk == 1){
+                    prodf1.src = "images/products/undercarriage/Top Roller Undercarriage.png";
+                    fotoproduk = 0;
+                } else {
+                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
+                    fotoproduk = 1;
+                }
             }
             
             function trackroller(){
-                prodf1.src = "images/products/undercarriage/Track Roller Undercarriage.png"
+                if (fotoproduk == 1){
+                    prodf1.src = "images/products/undercarriage/Track Roller Undercarriage.png";
+                    fotoproduk = 0;
+                } else {
+                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
+                    fotoproduk = 1;
+                }
             }
 
+            // BUCKET PRODUCTS
+
             function stdbucket(){
-                prodf2.src = "images/products/bucket/BUCKET STANDARD.png"
+                prodf2.src = "images/products/bucket/BUCKET STANDARD.png";
             }
 
             function ripbucket(){
@@ -1008,6 +1116,8 @@
                 prodf2.src = "images/products/bucket/Chipping Bucket.png"
             }
 
+            // BUCKET PARTS 
+
             function atbucket(){
                 prodf3.src = "images/products/bucket_parts/Adapter Tooth bucket.png"
             }
@@ -1019,6 +1129,8 @@
             function tigerbucket(){
                 prodf3.src = "images/products/bucket_parts/TOOTH BUCKET TIGER.png"
             }
+
+            // OTHERS
 
             function nozzle(){
                 prodf5.src = "images/products/others/nozzle injector.png"
@@ -1052,6 +1164,7 @@
                 prodf5.src = "images/products/others/fuel filter 2.png"
             }
 
+            // PRODUCT SHOW HIDE 
 
             function hideShowSatu() {
                 if (display == 1) {
