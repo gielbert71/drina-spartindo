@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="owl.carousel.min.css">
     <link rel="stylesheet" href="owl.theme.default.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: Montserrat;
@@ -132,6 +133,10 @@
             margin-left: 48px;
         }
 
+        .missiontext{
+            max-width: 47.92%;
+        }
+
         @media (min-width:1000px) {
             
             .itemp{
@@ -186,6 +191,10 @@
             .fbmdc{
                 max-width: 97%;
             }
+
+            .missiontext{
+                max-width: 90%;
+            }
             
         }
 
@@ -201,7 +210,7 @@
 
         .aboutus {
             position: relative;
-            background: linear-gradient(180deg, rgba(25, 45, 53, 0.89) 22.64%, rgba(12, 33, 42, 0.911) 84.56%, rgb(12, 33, 42) 99%),
+            background: linear-gradient(180deg,rgba(25, 45, 53, 0.899) 25.64%, rgba(12, 33, 42, 0.899) 92%,rgba(12, 33, 42, 0.855) 92%,rgba(12, 33, 42, 0.855) 92%,rgba(12, 33, 42, 0.855) 98.56%, rgba(12, 33, 42, 0.877) 98.56%, rgb(12, 33, 42, 0.995) 100%),
             url('vid.mp4') center/cover;
             background-size: 100% 100%;
             color: white;
@@ -256,6 +265,19 @@
             transition: all ease 0.2s;
         }
 
+        .goldhover:hover{
+            color: #ffcd11;
+        }
+
+        @media (max-width:400px){
+            .transisi a {
+                font-size: small;
+                max-width: 130px;
+                max-height: 40px;
+                border-radius: 15px;
+            }
+        }
+
         .prodbox{
             background-color: #FFF;
             width:fit-content;
@@ -264,9 +286,23 @@
             transition: box-shadow 0.5s ease;
         }
 
+        .boxi{
+            background: linear-gradient(90deg, #e7e7e7, #e7e7e7, #FAFCB4, #FFEA54, #FFE76A, #FFEA54, #FAFCB4, #e7e7e7, #e7e7e7);
+            background-size: 800% 800%;
+            animation: boxi 2s ease;
+        }
+
+        @keyframes boxi {
+            0%{
+                background-position: 0 0;
+            } 100% {
+                background-position: 100%;
+            }
+        }
+
         .prodbox:hover, .prodbox:active{
             background: linear-gradient(90deg, #FFF, #FFF, #FAFCB4, #FFEA54, #FFE76A, #FFEA54, #FAFCB4, #FFF, #FFF);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 6px 20px 0 rgba(0, 0, 0, 0);
             background-size: 800% 800%;
             animation: producthover 2s ease;
         }
@@ -274,16 +310,26 @@
         @keyframes producthover{
             0%{
                 background-position: 0 0;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+            } 50% {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                background-position: 50%;
+
             }
             100%{
                 background-position: 100% 100%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
             }
         }
 
         img{
             transition: all 0.2s ease;
         }
-        
+
+        .icons{
+            font-size: 30px;
+            color: white;
+        }
         
     </style>
 
@@ -293,21 +339,18 @@
     <div class="h-full">
         <nav class="fixed w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600"
             style="background-color: #172b33;">
-            <div class="flex flex-wrap justify-between mx-auto p-4" style="max-width: 88%;">
+            <div class="flex flex-wrap justify-between mx-auto navsize lg:p-[23px] p-3" style="max-width: 88%;">
 
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-auto" id="navbar-">
-                    <a href="https://www.facebook.com/profile.php?id=100094584266578" style="margin-right: 30px;"><img
-                            src='images/icons/fb.png' alt="Facebook" class="icons linka"></a>
-                    <a href="#" style="margin-right: 30px;"><img src="images/icons/linkedin.png" alt="LinkedIn"
-                            class="icons linka"></a>
-                    <a href="https://www.instagram.com/drinaspartindoglobal.98/" style="margin-right: 30px;"><img
-                            src="images/icons/ig.png" alt="Instagram" class="icons linka"></a>
-                    <a href="https://www.tokopedia.com/dspartindo" style="margin-right: 30px;"><img
-                            src="images/icons/tokopedia.png" alt="Tokopedia" class="icons linka"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100094584266578" style="margin-right: 30px;" class="icons linka"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#" style="margin-right: 30px;" class="icons linka"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/drinaspartindoglobal.98/" style="margin-right: 30px;" class="icons linka"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tokopedia.com/dspartindo" style="margin-right: 30px; margin-top: 4%;"><img
+                            src="images/icons/tokopedia.png" alt="Tokopedia" class="icons linka" style="height: 26.5px; width: 26.5px;"></a>
                      <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="margin-right: 10px;">Get started</button> -->
                     <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button> -->
                     <button data-collapse-toggle="navbar-sticky" type="button"
-                        class="inline-flex ml-auto items-center p-2 w-10 h-10 justify-center text-sm text-white hover:text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        class="inline-flex ml-auto items-center p-2 w-10 h-10 justify-center text-sm text-white hover:text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="navbar-sticky" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -322,23 +365,23 @@
                         style="background-color: #172b33;">
                         <li>
                             <a href="#aboutus"
-                                class="block py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 texthover" aria-current="
+                                class="block goldhover py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent  dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 texthover" aria-current="
                                 page">ABOUT US</a>
                         </li>
                         <li></li>
                         <li>
                             <a href="#product"
-                                class="texthover block py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PRODUCT</a>
+                                class="texthover goldhover block py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent  dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PRODUCT</a>
                         </li>
                         <li></li>
                         <li>
                             <a href="#inquiry"
-                                class="texthover block py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">INQUIRY</a>
+                                class="texthover goldhover block py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent  dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">INQUIRY</a>
                         </li>
                         <li></li>
                         <li>
                             <a href="#brandlist"
-                                class="texthover block py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BRAND
+                                class="texthover goldhover block py-2 px-5 text-white rounded hover:bg-gray-600 md:hover:bg-transparent  dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BRAND
                                 LIST</a>
                         </li>
                         <div class="flex flex-row">
@@ -371,7 +414,7 @@
         </nav>
         <div class="h-full">
 
-            <video playsinline autoplay muted loop src="Street.mp4"
+            <video playsinline autoplay muted loop src="Greyscale.mp4"
             style="position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; object-fit: cover; overflow: hidden;"
             type="video/webm"></video>
             <!-- ABOUT US -->
@@ -389,7 +432,7 @@
             <!-- ABOUT US TEXT -->
             <div class="flex justify-center items-center">
                 
-                <p class="text-center abtext opac" style="margin-top:5%; padding-bottom: 200px;">
+                <p class="text-center abtext opac md:text-base text-sm" style="margin-top:5%; padding-bottom: 200px;">
                     Known as DSG, was established in 2020 with the goal
                     of becoming a leader in the Heavy Equipment Spare
                     parts industry in Indonesia. By staying true to our core
@@ -408,13 +451,13 @@
         <div class="flex 2xl:justify-between justify-evenly mt-16" style="width: 660px;">
             <!-- Credential -->
             <!-- <div class="flex items-center justify-center mt-6"> -->
-            <a href="DSG Company Profile.pdf" class="md:hover:text-blue-700"
+            <a href="DSG Company Profile.pdf" class=" goldhover"
                 style="background-color: #172b33; text-align:center;">Credential</a>
             <!-- </div> -->
 
             <!-- Contact Us -->
             <!-- <div class="flex items-center justify-center mt-6"> -->
-            <a href="#contactus" class="md:hover:text-blue-700" style="background-color: #172b33; text-align:center;">Contact
+            <a href="#contactus" class="goldhover" style="background-color: #172b33; text-align:center;">Contact
                 Us</a>
             <!-- </div> -->
         </div>
@@ -432,25 +475,25 @@
         <br><br>
         <div class="flex justify-center items-center">
 
-            <p style="max-width: 920px;">Strengthen our market leadership by creating dynamic and profitable
+            <p class="missiontext">Strengthen our market leadership by creating dynamic and profitable
                 relationships with customers and suppliers through innovative solutions and committed employees</p>
         </div>
     </div>
     <br><br>
 
     <div class="py-16 text-center mt-9 inquiry" style="background-color: #ffcd11;">
-        <h1 class="text-3xl font-bold">OUR CORE VALUES</h1>
+        <h1 class="text-xl md:text-3xl font-bold">OUR CORE VALUES</h1>
 
         <!-- Grid for circles and text -->
         <div class="grid grid-cols-3 mt-8">
             <!-- First circle and text -->
             <div class="flex flex-col items-center">
-                <div class=" w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                <div class=" md:size-28 w-20 h-20 bg-white rounded-full flex items-center justify-center">
                     <!-- Content inside the first circle -->
-                    <img src="images/medal 1.png" alt="Core Value 1" class=" w-16 h-16">
+                    <img src="images/medal 1.png" alt="Core Value 1" class=" md:size-16 w-12 h-12">
                 </div>
                 <!-- Text below the first circle -->
-                <div class="text-center mt-2">
+                <div class="text-center mt-2 md:text-lg text-xs">
                     <p class="font-bold">"Integrity"</p><br>
                     <p style="margin: 0px 180px 0px 180px;">We are professional, ethical, honest and accountable.</p>
                 </div>
@@ -458,12 +501,12 @@
 
             <!-- Second circle and text -->
             <div class="flex flex-col items-center">
-                <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                <div class="md:size-28 w-20 h-20 bg-white rounded-full flex items-center justify-center">
                     <!-- Content inside the second circle -->
-                    <img src="images/like.png" alt="Core Value 2" class=" w-14 h-14">
+                    <img src="images/like.png" alt="Core Value 2" class=" md:size-14 w-10 h-10">
                 </div>
                 <!-- Text below the second circle -->
-                <div class="text-center mt-2">
+                <div class="text-center mt-2 md:text-lg text-xs">
                     <p class="font-bold">"Customer Focused"</p><br>
                     <p>We ensure every customer is satisfied.</p>
                 </div>
@@ -471,32 +514,32 @@
 
             <!-- Third circle and text -->
             <div class="flex flex-col items-center">
-                <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                <div class="md:size-28 w-20 h-20 bg-white rounded-full flex items-center justify-center">
                     <!-- Content inside the third circle -->
-                    <img src="images/1.png" alt="Core Value 3" class="w-20 h-20">
+                    <img src="images/1.png" alt="Core Value 3" class="md:w-20 md:h-20 size-14">
                 </div>
                 <!-- Text below the third circle -->
-                <div class="text-center mt-2">
+                <div class="text-center mt-2 md:text-lg text-xs">
                     <p class="font-bold">"Passion For Excellence"</p><br>
                     <p>To be the best,<br> all the time.</p>
                 </div>
             </div>
         </div>
     </div>
-    <h1 class="text-3xl text-center font-bold" style="padding-top: 180px;" id="brandlist">BRAND LIST</h1>
+    <h1 class="text-xl md:text-3xl text-center font-bold" style="padding-top: 180px;" id="brandlist">BRAND LIST</h1>
     <br><br><br><br>
     <div class="flex justify-center items-center">
-        <div class="owl-carousel owl-theme flex justify-center items-center brandlists">
-            <div class="item flex justify-center items-center"><img src="images/brand/bosch.png" alt=""></div>
-            <div class="item flex justify-center items-center"><img src="images/brand/kobelco.png" alt=""></div>
-            <div class="item flex justify-center items-center"><img src="images/brand/cummins.png" alt=""></div>
-            <div class="item flex justify-center items-center"><img src="images/brand/kobex.png" alt=""></div>
-            <div class="item"><img src="images/brand/perkins.png" alt=""></div>
-            <div class="item"><img src="images/brand/komatsu.png" alt=""></div>
-            <div class="item"><img src="images/brand/sany.png" alt=""></div>
-            <div class="item"><img src="images/brand/hitachi.png" alt=""></div>
-            <div class="item"><img src="images/brand/hexindo.png" alt=""></div>
-            <div class="item"><img src="images/brand/trakindo.png" alt=""></div>
+        <div class="owl-carousel owl-theme flex justify-center items-center brandlists" style="max-width:60%">
+            <div class="item"><img src="images/brand/bosch.png" alt="Bosch" title="Bosch"></div>
+            <div class="item"><img src="images/brand/kobelco.png" alt="Kobelco" title="Kobelco"></div>
+            <div class="item"><img src="images/brand/cummins.png" alt="Cummins" title="Cummins"></div>
+            <div class="item"><img src="images/brand/kobex.png" alt="Kobex" title="Kobex"></div>
+            <div class="item"><img src="images/brand/perkins.png" alt="Perkins" title="Perkins"></div>
+            <div class="item"><img src="images/brand/komatsu.png" alt="Komatsu" title="Komatsu"></div>
+            <div class="item"><img src="images/brand/sany.png" alt="Sany Makmur Perkasa" title="Sany Makmur Perkasa"></div>
+            <div class="item"><img src="images/brand/hitachi.png" alt="Hitachi" title="Hitachi"></div>
+            <div class="item"><img src="images/brand/hexindo.png" alt="Hexindo" title="Hexindo"></div>
+            <div class="item"><img src="images/brand/trakindo.png" alt="Trakindo CAT" title="Trakindo CAT"></div>
         </div>
     </div>
     <br>
@@ -505,25 +548,24 @@
     <br id="product">
     <!-- PRODUCTS -->
     <div style="margin-top: 180px;" class="product">
-        <h1 class="text-center text-3xl font-bold mb-10">OUR PRODUCTS</h1>
+        <h1 class="text-center md:text-3xl text-xl font-bold mb-10">OUR PRODUCTS</h1>
         <!-- UNDERCARRIAGE -->
         <div class="flex justify-center items-center">
-            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="hideShowSatu()">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods goldhover" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="hideShowSatu()" id="btn1">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
                         <button
-                        class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
-                        id="produk-1-text">UNDERCARRIAGE</button>
+                        class="text-center font-bold md:text-xl text-sm"
+                        id="produk-1-text" style="margin-left: 15%;">UNDERCARRIAGE</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
-                            src="button.png" style="max-height: 10px;" alt="" id="rotation1"></button>
+                        <button class="text-center font-bold text-sm md:text-xl mr-12" id="rotation1"><i class="fa-solid fa-chevron-down mr-1"></i></button>
                         </div>
                     </a>
                 </div>
         <div class="w-full z-20 top-0 start-0">
             <div class="flex flex-wrap items-center justify-between mx-auto py-2 prods"
-                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px">
+                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px" id="pdk1">
                 <div style="background-color: #e7e7e7; width:100%; height:100%px; border-radius: 20px; display:none;"
                     class="flex xl:grid-cols-2 py-10 produk-1" id="produk-1">
                     <div class="flex justify-center items-center pb-6 undercarriage prodbg">
@@ -613,23 +655,22 @@
         <!-- BUCKET -->
         <div class="flex justify-center items-center">
 
-            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="hideShowDua()">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods goldhover" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="hideShowDua()" id="btn2">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
                         <button
-                        class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
-                        id="produk-2-text">BUCKET</button>
+                        class="text-center font-bold md:text-xl text-sm"
+                        id="produk-2-text" style="margin-left: 18.5%;">BUCKET</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
-                            src="button.png" style="max-height: 10px;" alt="" id="rotation2"></button>
+                        <button class="text-center font-bold text-sm md:text-xl mr-12" id="rotation2"><i class="fa-solid fa-chevron-down mr-1"></i></button>
                         </div>
                     </a>
                 </div>
 
         <div class="w-full z-20 top-0 start-0">
             <div class="flex flex-wrap items-center justify-between mx-auto py-2 prods"
-                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px">
+                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px" id="pdk2">
                 <div style="background-color: #e7e7e7; width:100%; height:100%px; border-radius: 20px; display:none;"
                     class="flex xl:grid-cols-2 py-10 produk-2" id="produk-2">
                     <div class="flex justify-center items-center pt-6 pb-6 bucket prodbg">
@@ -697,23 +738,22 @@
         <!-- BUCKET PARTS -->
         <div class="flex justify-center items-center">
 
-            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkTiga()">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods goldhover" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkTiga()" id="btn3">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
                         <button
-                        class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
-                        id="produk-3-text">BUCKET PARTS</button>
+                        class="text-center font-bold text-sm md:text-xl"
+                        id="produk-3-text" style="margin-left: 16%;">BUCKET PARTS</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
-                            src="button.png" style="max-height: 10px;" alt="" id="rotation3"></button>
+                        <button class="text-center font-bold text-sm md:text-xl mr-12" id="rotation3"><i class="fa-solid fa-chevron-down mr-1"></i></button>
                         </div>
                     </a>
                 </div>
 
         <div class="w-full z-20 top-0 start-0">
             <div class="flex flex-wrap items-center justify-between mx-auto py-2 prods"
-                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px">
+                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px" id="pdk3">
                 <div style="background-color: #e7e7e7; width:100%; height:100%px; border-radius: 20px; display:none;"
                     class="flex xl:grid-cols-2 py-10 produk-3" id="produk-3">
                     <div class="flex justify-center items-center pt-6 pb-6 bucketparts prodbg">
@@ -728,36 +768,36 @@
                         <div class="flex md:flex-row flex-col justify-center items-center">
                             <div class="row flex justify-center items-center m-3" onclick="atbucket()">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center justify-center items-center">
+                                <a href="#."
+                                    class=" p-4 text-center justify-center items-center prodbox">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket_parts/Adapter Tooth bucket.png" alt="">
                                     </div>
                                     <p class=" mt-2">Adapter Tooth <br>Bucket</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center m-3">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="tbucket()">
+                                <a href="#."
+                                    class="prodbox p-4 text-center m-3" onclick="tbucket()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket_parts/Tooth Bucket 1.png" alt="">
                                     </div>
                                     <p class=" mt-2">Tooth Bucket</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="row">
+                            <div class="row flex justify-center items-center m-3">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center m-3" onclick="tigerbucket()">
+                                <a href="#."
+                                    class="prodbox p-4 text-center m-3" onclick="tigerbucket()">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket_parts/TOOTH BUCKET TIGER.png" alt="">
                                     </div>
                                     <p class=" mt-2">Tooth Bucket Tiger</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -768,45 +808,44 @@
         <!-- CYLINDER HYDRAULIC -->
         <div class="flex justify-center items-center">
 
-            <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkEmpat()">
+            <a href="#." class="flex flex-row w-full justify-center items-center prods goldhover" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkEmpat()" id="btn4">
                 <div class="flex justify-between w-full items-center mt-4">
                     <!-- <div class="relative"> -->
                         
                         <button
-                        class="text-center font-bold text-xl md:hover:text-blue-700 cyltext"
-                        id="produk-4-text">CYLINDER HYDRAULIC</button>
+                        class="text-center font-bold text-sm md:text-xl cyltext"
+                        id="produk-4-text" style="margin-left: 13.5%;">CYLINDER HYDRAULIC</button>
                         <!-- </div> -->
-                        <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
-                            src="button.png" style="max-height: 10px;" alt="" id="rotation4"></button>
+                        <button class="text-center font-bold text-sm md:text-xl mr-12" id="rotation4"><i class="fa-solid fa-chevron-down mr-1"></i></button>
                         </div>
                     </a>
                 </div>
 
         <div class="w-full z-20 top-0 start-0">
             <div class="flex flex-wrap items-center justify-between mx-auto py-2 prods"
-                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px">
+                style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px" id="pdk4">
                 <div style="background-color: #e7e7e7; width:100%; height:100%px; border-radius: 20px; display:none;"
                     class="flex xl:grid-cols-2 py-10 produk-4" id="produk-4">
                     <div class="flex justify-center items-center pb-6 cylinder prodbg">
                         <div class="relative justify-center items-center">
                             <!-- <img src="images/products/undercarriage/text.png" alt="" class="text-png"> -->
-                            <img src="images/products/cylinder/cylinder.png" alt="" class="prodf4 ml-auto mr-auto mb-auto"
+                            <img src="images/products/cylinder/cylinder.png" alt="" class="prodf4 ml-auto mr-auto mb-auto xl:mt-48"
                                 id="prodf4">
                         </div>
                     </div>
                     <!-- konten kanan -->
                     <div>
                         <div class="flex md:flex-row flex-col justify-center items-center">
-                            <div class="row flex justify-center items-center m-3" onclick="atbucket()">
+                            <div class="row flex justify-center items-center m-3" onclick="cylhyd()">
 
-                                <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                                    class=" p-4 text-center justify-center items-center">
+                                <a href="#."
+                                    class="prodbox p-4 text-center justify-center items-center">
                                     <div style="background-color: #e7e7e7; border-radius:5%;"
                                         class=" p-4 flex justify-center items-center itemp">
-                                        <img src="images/products/cylinder/cylinder.png" alt="">
+                                        <img src="images/products/cylinder/cylinder.png" alt="" style="margin-top: 30%;">
                                     </div>
                                     <p class=" mt-2">Cylinder Hydraulic</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -817,22 +856,21 @@
 <!-- OTHERS -->
 <div class="flex justify-center items-center">
 
-    <a href="#." class="flex flex-row w-full justify-center items-center prods" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkLima()">
+    <a href="#." class="flex flex-row w-full justify-center items-center prods goldhover" style="background-color: #e7e7e7; border-radius: 20px 20px 0px 0px;" onclick="produkLima()" id="btn5">
         <div class="flex justify-between w-full items-center mt-4">
             <!-- <div class="relative"> -->
                 
                 <button
-                class="text-center font-bold text-xl md:hover:text-blue-700 ml-12"
-                id="produk-5-text">OTHERS</button>
+                class="text-center font-bold text-sm md:text-xl"
+                id="produk-5-text" style="margin-left: 18.5%;">OTHERS</button>
                 <!-- </div> -->
-                <button class="text-center font-bold text-xl mr-12 md:hover:text-blue-700"><img
-                    src="button.png" style="max-height: 10px;" alt="" id="rotation5"></button>
+                <button class="text-center font-bold text-sm md:text-xl mr-12 md:hover:text-blue-700" id="rotation5"><i class="fa-solid fa-chevron-down mr-1"></i></button>
                 </div>
             </a>
         </div>
 <div class="w-full z-20 top-0 start-0">
     <div class="flex flex-wrap items-center justify-between mx-auto py-2 prods"
-        style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px">
+        style="background-color: #e7e7e7; border-radius: 0px 0px 20px 20px" id="pdk5">
         <div style="background-color: #e7e7e7; width:100%; height:100%px; border-radius: 20px; display:none;"
             class="flex xl:grid-cols-2 py-10 produk-5" id="produk-5">
             <div class="flex justify-center items-center pt-6 pb-6 otherp prodbg">
@@ -845,97 +883,97 @@
             <!-- konten kanan -->
             <div>
                 <div class="flex md:flex-row flex-col justify-center items-center">
-                    <div class="row flex justify-center items-center m-3" onclick="nozzle()">
+                    <div class="row flex justify-center items-center" onclick="nozzle()">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center justify-center items-center">
+                        <a href="#."
+                            class="prodbox p-4 text-center justify-center items-center">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/nozzle injector.png" alt="">
                             </div>
                             <p class=" mt-2">Nozzle Injector</p>
-                        </div>
+                        </a>
                     </div>
-                    <div class="row">
+                    <div class="row flex justify-center items-center m-3">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center m-3" onclick="oilf()">
+                        <a href="#."
+                            class="prodbox p-4 text-center m-3" onclick="oilf()">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/oil cooler.png" alt="">
                             </div>
                             <p class=" mt-2">Oil Filter</p>
-                        </div>
+                        </a>
                     </div>
-                    <div class="row">
+                    <div class="row flex justify-center items-center">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center m-3" onclick="fuelf()">
+                        <a href="#."
+                            class="prodbox p-4 text-center" onclick="fuelf()">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
-                                class=" p-4 flex justify-center items-center itemp">
+                                class=" flex justify-center items-center itemp">
                                 <img src="images/products/others/fuel filter donaldson.png" alt="">
                             </div>
                             <p class=" mt-2">Fuel Filter<br>Donaldson</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="flex md:flex-row flex-col justify-center items-center">
-                    <div class="row">
+                    <div class="row flex justify-center items-center">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center m-3" onclick="sealkit()">
+                        <a href="#."
+                            class="prodbox p-4 text-center m-3" onclick="sealkit()">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/seal kit.png" alt="">
                             </div>
                             <p class=" mt-2">Seal Kit</p>
-                        </div>
+                        </a>
                     </div>
-                    <div class="row">
+                    <div class="row flex justify-center items-center ">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center m-3" onclick="finald()">
+                        <a href="#."
+                            class="prodbox p-4 text-center m-3" onclick="finald()">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/final drive.png" alt="">
                             </div>
                             <p class=" mt-2">Final Drive</p>
-                        </div>
+                        </a>
                     </div>
-                    <div class="row">
+                    <div class="row flex justify-center items-center">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center m-3" onclick="ubolt()">
+                        <a href="#."
+                            class="prodbox p-4 text-center m-3" onclick="ubolt()">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/ubolt.png" alt="">
                             </div>
                             <p class=" mt-2">U Bolt</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="flex md:flex-row flex-col justify-center items-center">
-                    <div class="row">
+                    <div class="row flex justify-center items-center">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center m-3" onclick="turbo()">
+                        <a href="#."
+                            class="prodbox p-4 text-center m-3" onclick="turbo()">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/turbo.png" alt="">
                             </div>
                             <p class=" mt-2">Turbo</p>
-                        </div>
+                        </a>
                     </div>
-                    <div class="row">
+                    <div class="row flex justify-center items-center">
 
-                        <div style="background-color: #FFF; width:fit-content; height:fit-content; border-radius:5%"
-                            class=" p-4 text-center m-3" onclick="hydraulicf()">
+                        <a href="#."
+                            class="prodbox p-4 text-center m-3" onclick="hydraulicf()">
                             <div style="background-color: #e7e7e7; border-radius:5%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/fuel filter 2.png" alt="">
                             </div>
                             <p class=" mt-2">Hydraulic Filter</p>
-                        </div>
+                        </a>
                     </div>
                     
                 </div>
@@ -953,7 +991,7 @@
                 <h1 class="text-3xl" style="font-weight: 530;">CV. DRINA SPARTINDO GLOBAL</h1>
                 <br>
                 <!-- yellow line -->
-                <hr style="border: 2px solid #ffcd11; width: 340px;">
+                <hr style="border: 2px solid #ffcd11; max-width: 20.5%;">
                 <br>
             </div>
             <div>
@@ -1034,134 +1072,240 @@
             var display3 = 0;
             var display4 = 0;
             var display5 = 0;
-            var fotoproduk = 1;
-
+            
             // UNDERCARRIAGE PRODUCTS
-
+            
+            var uc1 = 1;
+            var uc2 = 1;
+            var uc3 = 1;
+            var uc4 = 1;
+            var uc5 = 1;
+            var uc6 = 1;
             function tracklink() {
-                if (fotoproduk == 1) {
-                    prodf1.src = "images/products/undercarriage/TRACKLINK UNDERCARRIAGE.png";
-                    fotoproduk = 0;
-                } else {
-                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
-                    fotoproduk = 1;
-                }
+                prodf1.src = "images/products/undercarriage/TRACKLINK UNDERCARRIAGE.png";
+                document.getElementById('pdk1').classList.add("boxi");
+                document.getElementById('btn1').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk1').classList.remove("boxi");
+                    document.getElementById('btn1').classList.remove("boxi");
+                }, 2100);
             }
             
             function sidecutter(){
-                if (fotoproduk == 1){
-                    prodf1.src = "images/products/undercarriage/Side Cutter.png";
-                    fotoproduk = 0;
-                } else {
-                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
-                    fotoproduk = 1;
-                }
+                prodf1.src = "images/products/undercarriage/Side Cutter.png";
+                document.getElementById('pdk1').classList.add("boxi");
+                document.getElementById('btn1').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk1').classList.remove("boxi");
+                    document.getElementById('btn1').classList.remove("boxi");
+                }, 2100);
             }
             
             function boltsandnuts(){
-                if (fotoproduk == 1){
-                    prodf1.src = "images/products/undercarriage/Bolts and Nuts.png";
-                    fotoproduk = 0;
-                } else {
-                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
-                    fotoproduk = 1;
-                }
+                prodf1.src = "images/products/undercarriage/Bolts and Nuts.png";
+                document.getElementById('pdk1').classList.add("boxi");
+                document.getElementById('btn1').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk1').classList.remove("boxi");
+                    document.getElementById('btn1').classList.remove("boxi");
+                }, 2100);
             }
             
             function sprocket(){
-                if (fotoproduk == 1){
-                    prodf1.src = "images/products/undercarriage/Sprocket.png";
-                    fotoproduk = 0;
-                } else {
-                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
-                    fotoproduk = 1;
-                }
+                prodf1.src = "images/products/undercarriage/Sprocket.png";
+                document.getElementById('pdk1').classList.add("boxi");
+                document.getElementById('btn1').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk1').classList.remove("boxi");
+                    document.getElementById('btn1').classList.remove("boxi");
+                }, 2100);
             }
             
             function toproller(){
-                if (fotoproduk == 1){
-                    prodf1.src = "images/products/undercarriage/Top Roller Undercarriage.png";
-                    fotoproduk = 0;
-                } else {
-                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
-                    fotoproduk = 1;
-                }
+                prodf1.src = "images/products/undercarriage/Top Roller Undercarriage.png";
+                document.getElementById('pdk1').classList.add("boxi");
+                document.getElementById('btn1').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk1').classList.remove("boxi");
+                    document.getElementById('btn1').classList.remove("boxi");
+                }, 2100);
             }
             
             function trackroller(){
-                if (fotoproduk == 1){
-                    prodf1.src = "images/products/undercarriage/Track Roller Undercarriage.png";
-                    fotoproduk = 0;
-                } else {
-                    prodf1.src = "images/products/undercarriage/Undercarriage.png";
-                    fotoproduk = 1;
-                }
+                prodf1.src = "images/products/undercarriage/Track Roller Undercarriage.png";
+                document.getElementById('pdk1').classList.add("boxi");
+                document.getElementById('btn1').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk1').classList.remove("boxi");
+                    document.getElementById('btn1').classList.remove("boxi");
+                }, 2100);
             }
 
             // BUCKET PRODUCTS
 
             function stdbucket(){
                 prodf2.src = "images/products/bucket/BUCKET STANDARD.png";
+                document.getElementById('pdk2').classList.add("boxi");
+                document.getElementById('btn2').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk2').classList.remove("boxi");
+                    document.getElementById('btn2').classList.remove("boxi");
+                }, 2100);
             }
 
             function ripbucket(){
-                prodf2.src = "images/products/bucket/BUCKET RIPPER.png"
+                prodf2.src = "images/products/bucket/BUCKET RIPPER.png";
+                document.getElementById('pdk2').classList.add("boxi");
+                document.getElementById('btn2').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk2').classList.remove("boxi");
+                    document.getElementById('btn2').classList.remove("boxi");
+                }, 2100);
             }
 
             function skebucket(){
-                prodf2.src = "images/products/bucket/Jaring Bucket.png"
+                prodf2.src = "images/products/bucket/Jaring Bucket.png";
+                document.getElementById('pdk2').classList.add("boxi");
+                document.getElementById('btn2').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk2').classList.remove("boxi");
+                    document.getElementById('btn2').classList.remove("boxi");
+                }, 2100);
             }
 
             function chibucket(){
-                prodf2.src = "images/products/bucket/Chipping Bucket.png"
+                prodf2.src = "images/products/bucket/Chipping Bucket.png";
+                document.getElementById('pdk2').classList.add("boxi");
+                document.getElementById('btn2').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk2').classList.remove("boxi");
+                    document.getElementById('btn2').classList.remove("boxi");
+                }, 2100);
             }
 
             // BUCKET PARTS 
 
             function atbucket(){
-                prodf3.src = "images/products/bucket_parts/Adapter Tooth bucket.png"
+                prodf3.src = "images/products/bucket_parts/Adapter Tooth bucket.png";
+                document.getElementById('pdk3').classList.add("boxi");
+                document.getElementById('btn3').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk3').classList.remove("boxi");
+                    document.getElementById('btn3').classList.remove("boxi");
+                }, 2100);
             }
 
             function tbucket(){
-                prodf3.src = "images/products/bucket_parts/Tooth Bucket 1.png"
+                prodf3.src = "images/products/bucket_parts/Tooth Bucket 1.png";
+                document.getElementById('pdk3').classList.add("boxi");
+                document.getElementById('btn3').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk3').classList.remove("boxi");
+                    document.getElementById('btn3').classList.remove("boxi");
+                }, 2100);
             }
 
             function tigerbucket(){
-                prodf3.src = "images/products/bucket_parts/TOOTH BUCKET TIGER.png"
+                prodf3.src = "images/products/bucket_parts/TOOTH BUCKET TIGER.png";
+                document.getElementById('pdk3').classList.add("boxi");
+                document.getElementById('btn3').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk3').classList.remove("boxi");
+                    document.getElementById('btn3').classList.remove("boxi");
+                }, 2100);
+            }
+
+            // CYLYNDER HYDRAULIC
+
+            function cylhyd(){
+                document.getElementById('pdk4').classList.add("boxi");
+                document.getElementById('btn4').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk4').classList.remove("boxi");
+                    document.getElementById('btn4').classList.remove("boxi");
+                }, 2100);
             }
 
             // OTHERS
 
             function nozzle(){
-                prodf5.src = "images/products/others/nozzle injector.png"
+                prodf5.src = "images/products/others/nozzle injector.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             function oilf(){
-                prodf5.src = "images/products/others/oil cooler.png"
+                prodf5.src = "images/products/others/oil cooler.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             function fuelf(){
-                prodf5.src = "images/products/others/fuel filter donaldson.png"
+                prodf5.src = "images/products/others/fuel filter donaldson.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             function sealkit(){
-                prodf5.src = "images/products/others/seal kit.png"
+                prodf5.src = "images/products/others/seal kit.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             function finald(){
-                prodf5.src = "images/products/others/final drive.png"
+                prodf5.src = "images/products/others/final drive.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             function ubolt(){
-                prodf5.src = "images/products/others/ubolt.png"
+                prodf5.src = "images/products/others/ubolt.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             function turbo(){
-                prodf5.src = "images/products/others/turbo.png"
+                prodf5.src = "images/products/others/turbo.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             function hydraulicf(){
-                prodf5.src = "images/products/others/fuel filter 2.png"
+                prodf5.src = "images/products/others/fuel filter 2.png";
+                document.getElementById('pdk5').classList.add("boxi");
+                document.getElementById('btn5').classList.add("boxi");
+                setTimeout(function(){
+                    document.getElementById('pdk5').classList.remove("boxi");
+                    document.getElementById('btn5').classList.remove("boxi");
+                }, 2100);
             }
 
             // PRODUCT SHOW HIDE 
@@ -1173,6 +1317,12 @@
                     rotation1.style.transform = 'rotate(0deg)';
                     prodt1.style.opacity = '1';
                     prodf1.src = "images/products/undercarriage/Undercarriage.png";
+                    document.getElementById('pdk1').classList.add("boxi");
+                    document.getElementById('btn1').classList.add("boxi");
+                    setTimeout(function(){
+                        document.getElementById('pdk1').classList.remove("boxi");
+                        document.getElementById('btn1').classList.remove("boxi");
+                    }, 2100);
                 } else {
                     divsatu.style.display = 'grid';
                     rotation1.style.transform = 'rotate(180deg)';
@@ -1187,6 +1337,12 @@
                     prodt2.style.opacity = '1';
                     display2 = 0;
                     rotation2.style.transform = 'rotate(0deg)';
+                    document.getElementById('pdk2').classList.add("boxi");
+                    document.getElementById('btn2').classList.add("boxi");
+                    setTimeout(function(){
+                        document.getElementById('pdk2').classList.remove("boxi");
+                        document.getElementById('btn2').classList.remove("boxi");
+                    }, 2100);
                 }else{
                     prodf2.src="images/products/bucket/BUCKET RIPPER.png";
                     produkdua.style.display = 'grid';
@@ -1203,6 +1359,12 @@
                     rotation3.style.transform = 'rotate(0deg)';
                     prodt3.style.opacity = '1';
                     prodf3.src="images/products/bucket_parts/Adapter Tooth bucket.png";
+                    document.getElementById('pdk3').classList.add("boxi");
+                    document.getElementById('btn3').classList.add("boxi");
+                    setTimeout(function(){
+                        document.getElementById('pdk3').classList.remove("boxi");
+                        document.getElementById('btn3').classList.remove("boxi");
+                    }, 2100);
                 } else {
                     produk3.style.display = 'grid';
                     rotation3.style.transform = 'rotate(180deg)';
@@ -1217,6 +1379,12 @@
                     produk4.style.display = 'none';
                     display4 = 0;
                     rotation4.style.transform = 'rotate(0deg)';
+                    document.getElementById('pdk4').classList.add("boxi");
+                    document.getElementById('btn4').classList.add("boxi");
+                    setTimeout(function(){
+                        document.getElementById('pdk4').classList.remove("boxi");
+                        document.getElementById('btn4').classList.remove("boxi");
+                    }, 2100);
                     prodt4.style.opacity = '1';
                 } else {
                     produk4.style.display = 'grid';
@@ -1234,6 +1402,12 @@
                     display5 = 0;
                     rotation5.style.transform = 'rotate(0deg)';
                     prodf5.src="images/products/others/nozzle injector.png";
+                    document.getElementById('pdk5').classList.add("boxi");
+                    document.getElementById('btn5').classList.add("boxi");
+                    setTimeout(function(){
+                        document.getElementById('pdk5').classList.remove("boxi");
+                        document.getElementById('btn5').classList.remove("boxi");
+                    }, 2100);
                 } else {
                     produk5.style.display = 'grid';
                     prodt5.style.opacity = '0';
