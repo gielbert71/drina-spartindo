@@ -63,12 +63,21 @@
         
         .prodf2{
             max-width: 350px;
-            margin-top: 25%;
+            margin-top: 15%;
+        }
+        .prodf3{
+            max-width: 350px;
+            margin-top: 15%;
         }
         
         .prodf4{
             max-width: 500px;
             margin-top: 25%;
+        }
+        
+        .prodf5{
+            max-width: 338px;
+            margin-top: 19%;
         }
 
         .produk-1{
@@ -176,10 +185,37 @@
             .prods{
                 max-width: 80%;
             }
-            .prodf, .prodf2, .prodf4{
+            .prodf{
+                position:relative;
                 max-width: 70%;
                 margin-top: 0;
-                
+                top: -10px;
+            }
+
+            .prodf5{
+                position:relative;
+                max-width: 70%;
+                margin-top: 0;
+                top: 5px;
+            }
+
+            .prodf2{
+                position: relative;
+                max-width: 70%;
+                margin-top: 0;
+            }
+
+            .prodf3{
+                position: relative;
+                max-width: 70%;
+                margin-top: 0;
+                top: -17px;
+            }
+            .prodf4{
+                position: relative;
+                max-width: 70%;
+                margin-top: 0;
+                top: -22px;
             }
             .prodbg{
                 background-size: 80%;
@@ -210,7 +246,7 @@
 
         .aboutus {
             position: relative;
-            background: linear-gradient(180deg,rgba(25, 45, 53, 0.899) 25.64%, rgba(12, 33, 42, 0.899) 92%,rgba(12, 33, 42, 0.855) 92%,rgba(12, 33, 42, 0.855) 92%,rgba(12, 33, 42, 0.855) 98.56%, rgba(12, 33, 42, 0.877) 98.56%, rgb(12, 33, 42, 0.995) 100%),
+            background: linear-gradient(180deg,rgba(25, 45, 53, 0.899) 25.64%, rgba(12, 33, 42, 0.899) 94%,rgba(12, 33, 42, 0.855) 94%,rgba(12, 33, 42, 0.855) 94%,rgba(12, 33, 42, 0.855) 98.56%, rgba(12, 33, 42, 0.877) 98.56%, rgb(12, 33, 42, 0.995) 100%),
             url('vid.mp4') center/cover;
             background-size: 100% 100%;
             color: white;
@@ -282,7 +318,7 @@
             background-color: #FFF;
             width:fit-content;
             height:fit-content;
-            border-radius:5%;
+            border-radius:10%;
             transition: box-shadow 0.5s ease;
         }
 
@@ -529,7 +565,7 @@
     <h1 class="text-xl md:text-3xl text-center font-bold" style="padding-top: 180px;" id="brandlist">BRAND LIST</h1>
     <br><br><br><br>
     <div class="flex justify-center items-center">
-        <div class="owl-carousel owl-theme flex justify-center items-center brandlists" style="max-width:60%">
+        <div class="owl-carousel owl-theme flex justify-center items-center" style="max-width: 70%;">
             <div class="item"><img src="images/brand/bosch.png" alt="Bosch" title="Bosch"></div>
             <div class="item"><img src="images/brand/kobelco.png" alt="Kobelco" title="Kobelco"></div>
             <div class="item"><img src="images/brand/cummins.png" alt="Cummins" title="Cummins"></div>
@@ -581,10 +617,10 @@
                             <div class="row flex justify-center items-center m-3" onclick="tracklink()">
 
                                 <a href="#."
-                                    class=" p-4 text-center justify-center items-center prodbox">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center justify-center items-center prodbox">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
-                                        <img src="images/products/undercarriage/TRACKLINK UNDERCARRIAGE.png" alt="">
+                                        <img src="images/products/undercarriage/TRACKLINK UNDERCARRIAGE.png" alt="" style="margin-top: 30%;">
                                     </div>
                                     <p class=" mt-2">Tracklink</p>
                                 </a>
@@ -592,10 +628,10 @@
                             <div class="row flex justify-center items-center" onclick="sidecutter()">
 
                                 <a href="#." 
-                                    class=" p-4 text-center m-3 prodbox">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
-                                        <img src="images/products/undercarriage/Side Cutter.png" alt="">
+                                        <img src="images/products/undercarriage/Side Cutter.png" alt="" style="margin-top: 30%;">
                                     </div>
                                     <p class=" mt-2">Side Cutter</p>
                                 </a>
@@ -603,8 +639,8 @@
                             <div class="row flex justify-center items-center">
 
                                 <a href="#."
-                                    class=" p-4 text-center m-3 prodbox" onclick="boltsandnuts()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox" onclick="boltsandnuts()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Bolts and Nuts.png" alt="">
                                     </div>
@@ -616,8 +652,8 @@
                             <div class="row flex justify-center items-center">
 
                                 <a href="#."
-                                    class=" p-4 text-center m-3 prodbox" onclick="sprocket()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox" onclick="sprocket()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Sprocket.png" alt="">
                                     </div>
@@ -627,8 +663,8 @@
                             <div class="row flex justify-center items-center">
 
                                 <a href="#." 
-                                    class=" p-4 text-center m-3 prodbox" onclick="trackroller()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox" onclick="trackroller()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Track Roller Undercarriage.png" alt="">
                                     </div>
@@ -638,8 +674,8 @@
                             <div class="row flex justify-center items-center">
 
                                 <a href="#."
-                                    class=" p-4 text-center m-3 prodbox" onclick="toproller()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox" onclick="toproller()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/undercarriage/Top Roller Undercarriage.png" alt="">
                                     </div>
@@ -686,8 +722,8 @@
                             <div class="row flex justify-center items-center m-3" onclick="stdbucket()">
 
                                 <a href="#."
-                                    class=" p-4 text-center justify-center items-center prodbox">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center justify-center items-center prodbox">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/BUCKET STANDARD.png" alt="">
                                     </div>
@@ -697,8 +733,8 @@
                             <div class="row flex justify-center items-center">
 
                                 <a href="#>"
-                                    class=" p-4 text-center m-3 prodbox" onclick="ripbucket()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox" onclick="ripbucket()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/BUCKET RIPPER.png" alt="">
                                     </div>
@@ -708,8 +744,8 @@
                             <div class="row flex justify-center items-center">
 
                                 <a href="#."
-                                    class=" p-4 text-center m-3 prodbox" onclick="skebucket()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox" onclick="skebucket()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/Jaring Bucket.png" alt="">
                                     </div>
@@ -721,8 +757,8 @@
                             <div class="row flex justify-center items-center">
 
                                 <a href="#."
-                                    class=" p-4 text-center m-3 prodbox" onclick="chibucket()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center m-3 prodbox" onclick="chibucket()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket/Chipping Bucket.png" alt="">
                                     </div>
@@ -759,7 +795,7 @@
                     <div class="flex justify-center items-center pt-6 pb-6 bucketparts prodbg">
                         <div class="relative justify-center items-center">
                             <!-- <img src="images/products/undercarriage/text.png" alt="" class="text-png"> -->
-                            <img src="images/products/bucket_parts/Adapter Tooth bucket.png" alt="" class="prodf2 ml-auto mr-auto mb-auto"
+                            <img src="images/products/bucket_parts/Adapter Tooth bucket.png" alt="" class="prodf3 ml-auto mr-auto mb-auto"
                                  id="prodf3">
                         </div>
                     </div>
@@ -769,19 +805,19 @@
                             <div class="row flex justify-center items-center m-3" onclick="atbucket()">
 
                                 <a href="#."
-                                    class=" p-4 text-center justify-center items-center prodbox">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class=" pt-4 px-4 pb-1 text-center justify-center items-center prodbox">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket_parts/Adapter Tooth bucket.png" alt="">
                                     </div>
-                                    <p class=" mt-2">Adapter Tooth <br>Bucket</p>
+                                    <p class=" mt-2 text-sm">Adapter Tooth Bucket</p>
                                 </a>
                             </div>
                             <div class="row flex justify-center items-center m-3">
 
                                 <a href="#."
-                                    class="prodbox p-4 text-center m-3" onclick="tbucket()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class="prodbox pt-4 px-4 pb-1 text-center m-3" onclick="tbucket()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket_parts/Tooth Bucket 1.png" alt="">
                                     </div>
@@ -791,8 +827,8 @@
                             <div class="row flex justify-center items-center m-3">
 
                                 <a href="#."
-                                    class="prodbox p-4 text-center m-3" onclick="tigerbucket()">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class="prodbox pt-4 px-4 pb-1 text-center" onclick="tigerbucket()">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/bucket_parts/TOOTH BUCKET TIGER.png" alt="">
                                     </div>
@@ -839,8 +875,8 @@
                             <div class="row flex justify-center items-center m-3" onclick="cylhyd()">
 
                                 <a href="#."
-                                    class="prodbox p-4 text-center justify-center items-center">
-                                    <div style="background-color: #e7e7e7; border-radius:5%;"
+                                    class="prodbox pt-4 px-4 pb-1 text-center justify-center items-center">
+                                    <div style="background-color: #e7e7e7; border-radius:10%;"
                                         class=" p-4 flex justify-center items-center itemp">
                                         <img src="images/products/cylinder/cylinder.png" alt="" style="margin-top: 30%;">
                                     </div>
@@ -876,7 +912,7 @@
             <div class="flex justify-center items-center pt-6 pb-6 otherp prodbg">
                 <div class="relative justify-center items-center">
                     <!-- <img src="images/products/undercarriage/text.png" alt="" class="text-png"> -->
-                    <img src="images/products/others/nozzle injector.png" alt="" class="prodf ml-auto mr-auto mb-auto"
+                    <img src="images/products/others/nozzle injector.png" alt="" class="prodf5 ml-auto mr-auto mb-auto"
                          id="prodf5">
                 </div>
             </div>
@@ -886,8 +922,8 @@
                     <div class="row flex justify-center items-center" onclick="nozzle()">
 
                         <a href="#."
-                            class="prodbox p-4 text-center justify-center items-center">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center justify-center items-center">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/nozzle injector.png" alt="">
                             </div>
@@ -897,8 +933,8 @@
                     <div class="row flex justify-center items-center m-3">
 
                         <a href="#."
-                            class="prodbox p-4 text-center m-3" onclick="oilf()">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center m-3" onclick="oilf()">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/oil cooler.png" alt="">
                             </div>
@@ -908,12 +944,12 @@
                     <div class="row flex justify-center items-center">
 
                         <a href="#."
-                            class="prodbox p-4 text-center" onclick="fuelf()">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center" onclick="fuelf()">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" flex justify-center items-center itemp">
                                 <img src="images/products/others/fuel filter donaldson.png" alt="">
                             </div>
-                            <p class=" mt-2">Fuel Filter<br>Donaldson</p>
+                            <p class=" text-sm mt-2">Fuel Filter Donaldson</p>
                         </a>
                     </div>
                 </div>
@@ -921,8 +957,8 @@
                     <div class="row flex justify-center items-center">
 
                         <a href="#."
-                            class="prodbox p-4 text-center m-3" onclick="sealkit()">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center m-3" onclick="sealkit()">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/seal kit.png" alt="">
                             </div>
@@ -932,8 +968,8 @@
                     <div class="row flex justify-center items-center ">
 
                         <a href="#."
-                            class="prodbox p-4 text-center m-3" onclick="finald()">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center m-3" onclick="finald()">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/final drive.png" alt="">
                             </div>
@@ -943,8 +979,8 @@
                     <div class="row flex justify-center items-center">
 
                         <a href="#."
-                            class="prodbox p-4 text-center m-3" onclick="ubolt()">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center m-3" onclick="ubolt()">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/ubolt.png" alt="">
                             </div>
@@ -956,8 +992,8 @@
                     <div class="row flex justify-center items-center">
 
                         <a href="#."
-                            class="prodbox p-4 text-center m-3" onclick="turbo()">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center m-3" onclick="turbo()">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/turbo.png" alt="">
                             </div>
@@ -967,8 +1003,8 @@
                     <div class="row flex justify-center items-center">
 
                         <a href="#."
-                            class="prodbox p-4 text-center m-3" onclick="hydraulicf()">
-                            <div style="background-color: #e7e7e7; border-radius:5%;"
+                            class="prodbox pt-4 px-4 pb-1 text-center m-3" onclick="hydraulicf()">
+                            <div style="background-color: #e7e7e7; border-radius:10%;"
                                 class=" p-4 flex justify-center items-center itemp">
                                 <img src="images/products/others/fuel filter 2.png" alt="">
                             </div>
@@ -1031,7 +1067,7 @@
 
             $('.owl-carousel').owlCarousel({
                 loop: true,
-                margin: 290,
+                margin: 210,
                 autoplay: true,
                 center: true,
                 responsive: {
